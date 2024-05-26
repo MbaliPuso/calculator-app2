@@ -45,28 +45,30 @@ input {
 button {
     height: 48px;
     width: 48px;
-    background-color: #ecf0f3;
-    box-shadow: inset 5px 5px 12px #ffffff,
-                        5px 5px 12px rgba(0,0,0,.16);
+    background-color: #333;
+    color: #fff;
+    box-shadow: 5px 5px 12px rgba(0,0,0,.16);
     border: none;
     border-radius: 50%;
     margin: 8px;
     font-size: 16px;
 }
 
+.operator {
+    background-color: #f1a33c;
+    color: #fff;
+}
+
+.function {
+    background-color: #a5a5a5;
+}
+
 .zero {
     grid-column: 1 / span 2;
     width: 115px;
     border-radius: 40px;
-    background-color: mediumseagreen;
-    box-shadow: inset 5px 5px 12px #ffffff,
-                        5px 5px 12px rgba(0,0,0,.16);
+    background-color: #a5a5a5;
+    box-shadow: 5px 5px 12px rgba(0,0,0,.16); 
 }
 
-.clear {
-    background-color: cornflowerblue ;
-}
 
-.delete {
-    background-color: crimson;
-}
