@@ -1,16 +1,25 @@
+// Selects input element and stores it in a variable
 let outputScreen = document.getElementById("output-screen");
 
-function display(num) {
-    outputScreen.value += num;
+function display(num) { // num is a parameter
+    if (num == '%') {
+        outputScreen.value = outputScreen.value / 100;
+    } else {
+    outputScreen.value += num; // Updates the displayed value on screen
+    }
 }
 
 function Calculate() {
     try {
-        outputScreen.value = eval(outputScreen.value);
+        let result = eval(outputScreen.value); // Function that evaluates arithmetic expressions (+, -, /, *)
+        if (outputScreen.value.includes('/0')) {
+            throw new Error("Division by zero");
+        }
+        outputScreen.value = result;
     }
     catch (err) 
     {
-        alert('Invalid');
+        outputScreen.value = 'Invalid';
     }
 }
 
