@@ -15,7 +15,7 @@ function Calculate() {
         if (outputScreen.value.includes('/0')) {
             throw new Error("Division by zero");
         }
-        outputScreen.value = result;
+        outputScreen.value = result.toFixed(3);
     }
     catch (err) 
     {
